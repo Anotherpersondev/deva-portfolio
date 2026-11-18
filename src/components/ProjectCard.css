@@ -1,0 +1,25 @@
+.project-card {
+  background: #ffffff;
+  color: #222;
+  padding: 25px;
+  margin: 0;
+  width: 250px;
+  min-height: 150px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  transition: 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.project-card p {
+  color: #555;
+}
