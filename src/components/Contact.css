@@ -1,0 +1,64 @@
+
+.contact-section {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #7c3aed;
+  font-size: 16px;
+}
+
+.contact-section textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Dark Theme */
+.container.dark .contact-section {
+  background: #1f2937;
+  color: white;
+}
+
+/* Light Theme */
+.container.light .contact-section {
+  background: #f5f5f5;
+  color: #222;
+}
+
+.contact-section button {
+  padding: 12px;
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contact-section p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.contact-section input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-section textarea {
+  width: 100%;
+  box-sizing: border-box;
+}

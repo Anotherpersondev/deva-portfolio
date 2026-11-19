@@ -1,20 +1,44 @@
+
 .about-section {
   max-width: 800px;
   margin: 50px auto;
   padding: 30px;
-  background: #f5f5f5;
   border-radius: 12px;
   text-align: center;
+}
+
+/* Dark Theme */
+.container.dark .about-section {
+  background: #1f2937;
+}
+
+.container.dark .about-section h2 {
+  color: white;
+}
+
+.container.dark .about-section p {
+  color: #d1d5db;
+}
+
+/* Light Theme */
+.container.light .about-section {
+  background: #f5f5f5;
+}
+
+.container.light .about-section h2 {
+  color: #222;
+}
+
+.container.light .about-section p {
+  color: #555;
 }
 
 .about-section h2 {
   font-size: 30px;
   margin-bottom: 20px;
-  color: #222;
 }
 
 .about-section p {
   font-size: 17px;
   line-height: 1.8;
-  color: #555;
 }

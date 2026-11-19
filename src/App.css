@@ -14,35 +14,75 @@ body {
   padding: 30px 8%;
 }
 
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 15px 50px;
+  background-color: #111827;
+  color: white;
+}
+
+nav h2 {
+  color: #a78bfa;
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 25px;
 }
+
+nav a:hover {
+  color: #a78bfa;
+}
+
+
+nav button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #7c3aed;
+  color: white;
+  font-size: 16px;
+}
+
+
 
 .hero {
   text-align: center;
-  margin-top: 150px;
+  margin-top: 100px;
+  padding: 80px 20px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 48px;
+  margin: 0;
 }
 
 .hero h2 {
-  color: #38bdf8;
-  margin: 15px;
+  font-size: 28px;
+  color: #a78bfa;
+  margin: 0;
 }
 
 .hero p {
-  color: #cbd5e1;
-  margin: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 600px;
 }
 
 button {
@@ -65,4 +105,128 @@ button {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Theme */
+.container.dark {
+  background-color: #111827;
+  color: white;
+  min-height: 100vh;
+}
+
+/* Light Theme */
+.container.light {
+  background-color: #ffffff;
+  color: #111827;
+  min-height: 100vh;
+}
+
+/* Dark Navbar */
+.container.dark nav {
+  background-color: #111827;
+  color: white;
+}
+
+/* Light Navbar */
+.container.light nav {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+/* Light Navbar Links */
+.container.light nav a {
+  color: #111827;
+}
+
+/* Hero Section */
+.container.dark .hero {
+  background-color: #1f2937;
+  color: white;
+}
+
+.container.light .hero {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* Dark Theme Headings */
+.container.dark h2 {
+  color: white;
+}
+
+/* Light Theme Headings */
+.container.light h2 {
+  color: #111827;
+}
+/* Dark Theme Headings */
+.container.dark h1 {
+  color: white;
+}
+
+/* Light Theme Headings */
+.container.light h1 {
+  color: #111827;
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 15px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav div {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+  .hero {
+    margin-top: 40px;
+    padding: 50px 15px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
+.hero button {
+  padding: 12px 25px;
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background-color: #6d28d9;
+  transform: translateY(-3px);
+}
+#projects {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  font-size: 32px;
+  margin-bottom: 35px;
+}
+
+.projects-container {
+  max-width: 1100px;
+  margin: 0 auto;
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Contact.css";
 function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -26,7 +27,7 @@ function Contact() {
         alert("Form Submitted Successfully!");
     }
     return (
-        <section id="contact">
+        <section id="contact" className="contact-section">
             <h2>Contact Me</h2>
 
             <form onSubmit={handleSubmit}>
@@ -37,7 +38,6 @@ function Contact() {
                     onChange={(e) => setName(e.target.value)}
                 />
                 <p>Your Name: {name}</p>
-                <br /><br />
 
                 <input
                     type="email"
@@ -46,10 +46,8 @@ function Contact() {
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <p>Your Email: {email}</p>
-                <br /><br />
 
                 <textarea placeholder="Enter Your Message"></textarea>
-                <br /><br />
 
                 <button type="submit">Submit</button>
             </form>

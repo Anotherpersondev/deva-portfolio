@@ -1,25 +1,59 @@
+
 .project-card {
-  background: #ffffff;
-  color: #222;
   padding: 25px;
   margin: 0;
   width: 250px;
   min-height: 150px;
   box-sizing: border-box;
   border-radius: 12px;
-  border: 1px solid #ddd;
   transition: 0.3s;
+  border: 1px solid #7c3aed;
 }
+
+/* Dark Theme */
+.container.dark .project-card {
+  background: #1f2937;
+  color: white;
+}
+
+.container.dark .project-card h3 {
+  color: #a78bfa;
+}
+
+.container.dark .project-card p {
+  color: #d1d5db;
+}
+
+/* Light Theme */
+.container.light .project-card {
+  background: #ffffff;
+  color: #222;
+}
+
+.container.light .project-card h3 {
+  color: #7c3aed;
+}
+
+.container.light .project-card p {
+  color: #555;
+}
+
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
-
-.project-card h3 {
-  margin-bottom: 10px;
-  color: #007bff;
+.project-card button {
+  padding: 10px 20px;
+  background-color: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
 }
 
-.project-card p {
-  color: #555;
+.project-card button:hover {
+  background-color: #6d28d9;
+  transform: translateY(-2px);
 }

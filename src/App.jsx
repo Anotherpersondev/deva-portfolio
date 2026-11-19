@@ -4,29 +4,40 @@ import "./App.css";
 import ProjectCard from "./components/ProjectCard";
 import { useState } from "react";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 function sayHello() {
   alert("Welcome to my Portfolio!");
 }
 
 function App() {
+  const [theme, setTheme] = useState("dark");
   return (
 
-    <div className="container">
-
+    <div className={`container ${theme}`}>
       <nav>
         <h2>Deva.dev</h2>
         <div>
+          <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
+
+          <button
+            onClick={() =>
+              setTheme(theme === "dark" ? "light" : "dark")
+            }
+          >
+            {theme === "dark" ? "☀️" : "🌙"}
+          </button>
+
         </div>
       </nav>
-
       <section className="hero">
         <h1>Hi, I'm Deva 👋</h1>
         <h2>React Developer</h2>
         <p>
-          BCA Graduate | Frontend Developer
+          BCA Graduate passionate about building modern,
+          responsive and user-friendly web applications using React.
         </p>
         <button
           onClick={() => {
@@ -37,8 +48,14 @@ function App() {
         >
           View My Projects
         </button>
-        <button onClick={sayHello}>
-          View My Projects
+        <button
+          onClick={() => {
+            document.getElementById("contact").scrollIntoView({
+              behavior: "smooth"
+            });
+          }}
+        >
+          Contact Me
         </button>
       </section>
       <About />
@@ -65,7 +82,8 @@ function App() {
 
         </div>
       </section>
-          <Contact />
+      <Contact />
+      <Footer />
     </div>
 
   );
