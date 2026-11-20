@@ -14,7 +14,7 @@ function App() {
   return (
 
     <div className={`container ${theme}`}>
-      <nav>
+      <nav className="navbar">
         <h2>Deva.dev</h2>
         <div>
           <a href="#home">Home</a>
@@ -33,31 +33,72 @@ function App() {
         </div>
       </nav>
       <section className="hero">
-        <h1>Hi, I'm Deva 👋</h1>
-        <h2>React Developer</h2>
-        <p>
-          BCA Graduate passionate about building modern,
-          responsive and user-friendly web applications using React.
-        </p>
-        <button
-          onClick={() => {
-            document.getElementById("projects").scrollIntoView({
-              behavior: "smooth"
-            });
-          }}
-        >
-          View My Projects
-        </button>
-        <button
-          onClick={() => {
-            document.getElementById("contact").scrollIntoView({
-              behavior: "smooth"
-            });
-          }}
-        >
-          Contact Me
-        </button>
+
+        <div className="hero-image">
+          <img
+            src="/profile.jpg"
+            alt="My Profile"
+            className="profile-image"
+          />
+        </div>
+
+        <div className="hero-content">
+          <h1>Hi, I'm Deva 👋</h1>
+          <h2>React Developer</h2>
+
+          <p>
+            BCA Graduate passionate about building modern,
+            responsive and user-friendly web applications using React.
+          </p>
+          <div className="social-links">
+            <a
+              href="https://github.com/Anotherpersondev"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/devendra-chavan-975500250/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn
+            </a>
+            <a href="/Devendra-resume.pdf.pdf" download="Devendra-resume.pdf">
+              Download Resume
+            </a>
+          </div>
+
+          <div className="hero-buttons">
+            <button
+              onClick={() => {
+                document.getElementById("projects").scrollIntoView({
+                  behavior: "smooth"
+                });
+              }}
+            >
+              View My Projects
+            </button>
+
+            <button
+              onClick={() => {
+                document.getElementById("contact").scrollIntoView({
+                  behavior: "smooth"
+                });
+              }}
+            >
+              Contact Me
+            </button>
+
+            
+          </div>
+
+        </div>
+
       </section>
+
       <About />
       <Skills />
       <section id="projects">

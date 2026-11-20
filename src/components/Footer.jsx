@@ -1,23 +1,32 @@
 
 import "./Footer.css";
+
 function Footer() {
   return (
     <footer className="footer">
-      <p>© 2026 Devendra Chavan</p>
+      <h3>Devendra Chavan</h3>
 
-      <div>
-        <a href="https://github.com/Anotherpersondev" target="_blank" rel="noreferrer">
+      <div className="footer-links">
+        <a
+          href="https://github.com/Anotherpersondev"
+          target="_blank"
+          rel="noreferrer"
+        >
           GitHub
         </a>
 
-        <span> | </span>
-
-        <a href="#contact">
-          Contact
+        <a
+          href="https://www.linkedin.com/in/devendra-chavan-975500250/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
         </a>
+
+        <a href="#contact">Contact</a>
       </div>
 
-      <p>All Rights Reserved.</p>
+      <p>© 2026 Devendra Chavan. All Rights Reserved.</p>
     </footer>
   );
 }

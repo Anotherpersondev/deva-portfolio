@@ -1,31 +1,42 @@
+
 import { useState } from "react";
 import "./Contact.css";
+
 function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
     function handleSubmit(e) {
         e.preventDefault();
 
-        if (name === "") {
+        if (name.trim() === "") {
             alert("Please Enter Your Name");
             return;
         }
 
-        if (email === "") {
+        if (email.trim() === "") {
             alert("Please Enter Your Email");
             return;
         }
-        if (!email.includes("@")) {
-            alert("Please Enter Valid Email");
-            return;
-        }
-        if (!email.includes(".com")) {
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             alert("Please Enter Valid Email");
             return;
         }
 
+        if (message.trim() === "") {
+            alert("Please Enter Your Message");
+            return;
+        }
+
         alert("Form Submitted Successfully!");
+
+        setName("");
+        setEmail("");
+        setMessage("");
     }
+
     return (
         <section id="contact" className="contact-section">
             <h2>Contact Me</h2>
@@ -37,7 +48,6 @@ function Contact() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                 />
-                <p>Your Name: {name}</p>
 
                 <input
                     type="email"
@@ -45,11 +55,14 @@ function Contact() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
-                <p>Your Email: {email}</p>
 
-                <textarea placeholder="Enter Your Message"></textarea>
+                <textarea
+                    placeholder="Enter Your Message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                />
 
-                <button type="submit">Submit</button>
+                <button type="submit">Send Message</button>
             </form>
         </section>
     );
